@@ -1,0 +1,50 @@
+#####--.ROSRC--#####
+
+# Clear environment variables
+unset ROS_IP
+unset ROS_MASTER_URI
+unset ROS_WORKSPACE
+unset ROS_PACKAGE_PATH
+unset ROS_HOSTNAME
+
+#ROS-Melodic
+source /opt/ros/melodic/setup.zsh
+
+###---------ROS_IP---------###
+#Find IP Address (on WIFI)
+NETWORK_INTERFACE=wlo1
+#on Ethernet
+#NETWORK_INTERFACE=eno1
+
+IP=$(ip -f inet addr show $NETWORK_INTERFACE | grep -Po 'inet \K[\d.]+')
+export ROS_IP="$IP"
+
+###-----ROS_MASTER_URI-----###
+#Local
+export ROS_MASTER_URI=http://localhost:11311
+
+#Turtlebot
+#export ROS_MASTER_URI=http://192.168.1.129:11311
+
+#Trey's Computer
+#export ROS_MASTER_URI=http://10.37.101.186:11311
+
+#Odroid--AUVSI
+#export ROS_MASTER_URI=http://192.168.1.8:11311
+
+#Groot
+#export ROS_MASTER_URI=http://192.168.1.78:11311
+#export ROS_MASTER_URI=http://192.168.0.78:11311
+
+#UBLOX
+#export ROS_MASTER_URI=http://192.168.0.115:11311
+
+#Workspaces
+#source /home/nathan/Workspaces/General/devel/setup.zsh
+#source /home/nathan/Workspaces/AUVSI/devel/setup.zsh
+source /home/nathan/Workspaces/MAGICC/devel/setup.zsh
+#source /home/nathan/Workspaces/quadsim_ws/devel/setup.zsh
+#source /home/nathan/Workspaces/Turtlebot/devel/setup.zsh
+#source /home/nathan/Workspaces/nist_mapping_ws/devel/setup.zsh
+#source /home/nathan/Workspaces/Whirly/devel/setup.zsh
+#source /home/nathan/Workspaces/ublox_ws/devel/setup.zsh

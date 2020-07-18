@@ -1,0 +1,25 @@
+#Attempt at creating aliases
+
+alias ssh_raph="ssh raph@192.168.1.129"
+alias ping_raph="ping 192.168.1.129"
+
+alias ssh_odroid="ssh odroid@192.168.1.8"
+alias ping_odroid-"ping 192.168.1.8"
+
+alias git_sub="git submodule update --init --recursive"
+
+alias lstty='ls /dev | grep tty | grep -ve '\''ttyS\?[0-9]\+'\'''
+
+alias zource="source ~/.zshrc"
+
+alias z="zource"
+
+alias tx="tmuxinator"
+
+alias u="cd .."
+
+alias aliases="vim ~/.aliases"
+
+alias rosrc="vim ~/.rosrc"
+
+alias zshrc="vim ~/.zshrc"
